@@ -18,7 +18,7 @@ html {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
-    background-color: blue;
+    background-color: rgb(224, 224, 232);
     margin-bottom: 30px;
     color: #333;
 }
