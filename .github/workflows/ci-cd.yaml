@@ -24,7 +24,7 @@ jobs:
           IMAGE_NAME="angiherrera29/pagina"
 
           # Iniciar sesión en Docker Hub
-          echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+          echo "Gonzalez.com290303nat" | docker login -u "angiherrera29" --password-stdin
 
           # Construir la imagen de Docker sin usar caché
           docker build --no-cache -t $IMAGE_NAME .
