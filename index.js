@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 (async () => {
    
-   // const conexion = await connectDatabase();
+   const conexion = await connectDatabase();
 
     app.listen(process.env.PORT, process.env.HOST, () => {
         console.log('Server is running on PORT ', process.env.PORT);
