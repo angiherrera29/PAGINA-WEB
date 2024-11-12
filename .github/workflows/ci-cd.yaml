@@ -21,7 +21,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           # Variables de entorno
-          IMAGE_NAME="marianaolivas/crm:1.0"
+          IMAGE_NAME="angiherrera29:pagina"
 
           # Iniciar sesión en Docker Hub
           echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
@@ -50,13 +50,13 @@ jobs:
             fi
 
             # Eliminar la imagen anterior
-            if [ "$(sudo docker images -q marianaolivas/crm:1.0)" ]; then
-              sudo docker rmi marianaolivas/crm:1.0
+            if [ "$(sudo docker images -q angiherrera29:pagina)" ]; then
+              sudo docker rmi angiherrera29:pagina
             fi
 
             # Ejecuta el contenedor de la aplicación
             sudo docker run -d \
               -p 80:3000 \
               --name myapp-container \
-              marianaolivas/crm:1.0
+              angiherrera29:pagina
           EOF
